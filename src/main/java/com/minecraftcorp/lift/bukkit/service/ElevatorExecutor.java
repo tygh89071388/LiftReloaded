@@ -66,6 +66,7 @@ public class ElevatorExecutor {
 		Location destination = elevator.getCenter(floor);
 		for (Entity entity : elevator.getPassengers()) {
 			Location location = entity.getLocation();
+			location.setWorld(destination.getWorld());
 			location.setX(destination.getX());
 			location.setY(destination.getY());
 			location.setZ(destination.getZ());
